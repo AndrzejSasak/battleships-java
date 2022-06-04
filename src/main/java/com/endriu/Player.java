@@ -88,11 +88,19 @@ public class Player {
     public int getNumOfAliveShips(List<Ship[]> ships) {
         int numOfAliveShips = 0;
 
-        for(int j = 0; j < 4; j++) {
-            for(int i = 0; i < numOfShips1; i++) {
-                if(ships.get(j)[i].isAlive()) numOfAliveShips++;
-            }
+        for(int i = 0; i < numOfShips1; i++) {
+            if(ships.get(0)[i].isAlive()) numOfAliveShips++;
         }
+        for(int i = 0; i < numOfShips2; i++) {
+            if(ships.get(1)[i].isAlive()) numOfAliveShips++;
+        }
+        for(int i = 0; i < numOfShips3; i++) {
+            if(ships.get(2)[i].isAlive()) numOfAliveShips++;
+        }
+        for(int i = 0; i < numOfShips4; i++) {
+            if(ships.get(3)[i].isAlive()) numOfAliveShips++;
+        }
+
         return numOfAliveShips;
     }
 }

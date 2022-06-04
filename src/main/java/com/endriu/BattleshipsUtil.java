@@ -288,7 +288,7 @@ public class BattleshipsUtil {
     }
 
     public static void pickAllUserShips(List<Ship[]> userShips) {
-        //picking ships of length 1
+        //picking ships of length
         for(int i = 0; i < Main.user.getNumOfShips1(); i++) {
             boolean hasError = true;
             while(hasError) {
@@ -351,6 +351,7 @@ public class BattleshipsUtil {
 
     private static void pickUserShip(Ship userShip) throws Exception {
         int length = userShip.getLength();
+        System.out.println(length);
         String[] shipSquares = new String[length];
         System.out.println("Please pick the squares for your ship of length " + length + ":");
         int[] squareIndex = new int[length];
@@ -395,7 +396,7 @@ public class BattleshipsUtil {
             }
         }
 
-        //assigning interface squares as taken
+        //assigning board squares as taken
         for (int i = 0; i < length; i++) {
             Main.board.setTakenByUserShip(shipSquares[i]);
         }
@@ -591,10 +592,10 @@ public class BattleshipsUtil {
         }
     }
 
-    public static Ship[] createShips(int numOfShips) {
+    public static Ship[] createShips(int numOfShips, int length) {
         Ship[] ships = new Ship[numOfShips];
         for(int i = 0; i < numOfShips; i++) {
-            ships[i] = new Ship(1);
+            ships[i] = new Ship(length);
         }
         return ships;
     }

@@ -26,15 +26,15 @@ public class Main {
         List<Ship[]> userShips = new ArrayList<>();
         List<Ship[]> enemyShips = new ArrayList<>();
 
-        Ship[] userShips1 = BattleshipsUtil.createShips(user.getNumOfShips1());
-        Ship[] userShips2 = BattleshipsUtil.createShips(user.getNumOfShips2());
-        Ship[] userShips3 = BattleshipsUtil.createShips(user.getNumOfShips3());
-        Ship[] userShips4 = BattleshipsUtil.createShips(user.getNumOfShips4());
+        Ship[] userShips1 = BattleshipsUtil.createShips(user.getNumOfShips1(), 1);
+        Ship[] userShips2 = BattleshipsUtil.createShips(user.getNumOfShips2(), 2);
+        Ship[] userShips3 = BattleshipsUtil.createShips(user.getNumOfShips3(), 3);
+        Ship[] userShips4 = BattleshipsUtil.createShips(user.getNumOfShips4(), 4);
 
-        Ship[] enemyShips1 = BattleshipsUtil.createShips(enemy.getNumOfShips1());
-        Ship[] enemyShips2 = BattleshipsUtil.createShips(enemy.getNumOfShips2());
-        Ship[] enemyShips3 = BattleshipsUtil.createShips(enemy.getNumOfShips3());
-        Ship[] enemyShips4 = BattleshipsUtil.createShips(enemy.getNumOfShips4());
+        Ship[] enemyShips1 = BattleshipsUtil.createShips(enemy.getNumOfShips1(), 1);
+        Ship[] enemyShips2 = BattleshipsUtil.createShips(enemy.getNumOfShips2(), 2);
+        Ship[] enemyShips3 = BattleshipsUtil.createShips(enemy.getNumOfShips3(), 3);
+        Ship[] enemyShips4 = BattleshipsUtil.createShips(enemy.getNumOfShips4(), 4);
 
         userShips.add(userShips1);
         userShips.add(userShips2);
